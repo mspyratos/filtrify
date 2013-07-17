@@ -19,12 +19,12 @@
 		callback  : undefined // function ( query, match, mismatch ) {}
 	}; 
 
-	function Filtrify( containerID, placeholderID, options ) {
+	function Filtrify( containerSelector, placeholderSelector, options ) {
 
 		this.options = $.extend({}, defaults, options) ;
 
-		this._container = $( "#" + containerID );
-		this._holder = $( "#" + placeholderID );
+		this._container = $(containerSelector);
+		this._holder = $(placeholderSelector);
 		this._items = this._container.children();
 		this._matrix = [];
 		this._fields = {};
